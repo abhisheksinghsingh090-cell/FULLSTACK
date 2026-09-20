@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0d0f16;
+  color: #ededf2;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #5eead4;
+  color: #0d0f16;
+}
+
+/* thin instrument-style scrollbar for the telemetry feed */
+.telemetry-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.telemetry-scroll::-webkit-scrollbar-thumb {
+  background: #262b3a;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
